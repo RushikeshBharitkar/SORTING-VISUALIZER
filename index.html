@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorting Algorithm Visualizer</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Sorting Algorithm Visualizer</h1>
+    <p>Learn and visualize sorting algorithms step by step!</p>
+  </header>
+
+  <!-- Control Panel -->
+  <section class="controls">
+    <div class="control-group">
+      <label for="algorithm">Select Algorithm:</label>
+      <select id="algorithm">
+        <option value="bubble">Bubble Sort</option>
+        <option value="selection">Selection Sort</option>
+        <option value="insertion">Insertion Sort</option>
+        <option value="merge">Merge Sort</option>
+        <option value="quick">Quick Sort</option>
+      </select>
+    </div>
+
+    <div class="control-group">
+      <label for="arraySize">Array Size:</label>
+      <input type="range" id="arraySize" min="10" max="100" value="50">
+      <span id="arraySizeValue">50</span>
+    </div>
+
+    <div class="control-group">
+      <label for="speed">Animation Speed:</label>
+      <input type="range" id="speed" min="1" max="100" value="50">
+      <span id="speedValue">50</span>
+    </div>
+
+    <div class="buttons">
+      <button id="generateArray">Generate New Array</button>
+      <button id="startSort">Start Sorting</button>
+      <button id="resetSort">Reset</button>
+    </div>
+  </section>
+
+  <!-- Info Panel -->
+  <section class="info-panel">
+    <div id="complexity">
+      <h3>Complexity</h3>
+      <p id="timeComplexity">Best: - | Avg: - | Worst: -</p>
+      <p id="spaceComplexity">Space: -</p>
+    </div>
+    <div id="stepInfo">
+      <h3>Step Info</h3>
+      <div id="stepsLog"></div>
+    </div>
+  </section>
+
+  <!-- Array Container -->
+  <section id="arrayContainer" class="array-container">
+    <!-- Bars with values will be dynamically generated -->
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Built with using HTML, CSS, and JavaScript and Sorting algorithms</p>
+    <p>Author:Rushikesh Anil Bharitkar</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
